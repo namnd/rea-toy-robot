@@ -1,17 +1,23 @@
-import { Coordinate } from './coordinate'
+import { Coordinate } from "./coordinate"
 
 export class Map
 {
-    private points: Coordinate[][]
+    width: number
+    height: number
 
     constructor(width: number, height: number)
     {
-        this.points = []
-        for (let i: number = 0; i < width; i++) {
-            this.points[i] = []
-            for (let j: number = 0; j < height; j++) {
-                this.points[i][j] = new Coordinate(i, j)
-            }
-        }
+        this.width = width
+        this.height = height
+    }
+
+    /**
+     * Validate a coordinate
+     * @param coordinate 
+     */
+    public validateCoordinate(coordinate: Coordinate)
+    {
+        return coordinate.x >= 0 && coordinate.x <= this.width
+            && coordinate.y >= 0 && coordinate.y <= this.height
     }
 }
