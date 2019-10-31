@@ -5,8 +5,7 @@ export class ReportCommand implements Command {
 
     execute(simulator: Simulator) {
         if (simulator.robot == null) {
-            console.log('Robot is not placed on the map yet')
-            return
+            throw new Error('Robot is not placed on the map yet')
         }
         console.log(`${simulator.robot}`)
     }

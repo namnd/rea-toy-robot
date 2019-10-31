@@ -16,9 +16,9 @@ export class Robot {
     coordinate: Coordinate
     direction: Direction
 
-    constructor() {
-        this.coordinate = new Coordinate(0, 0)
-        this.direction = Direction.EAST
+    constructor(coordinate?: Coordinate, direction?: Direction) {
+        this.coordinate = coordinate || new Coordinate(0, 0)
+        this.direction = direction || Direction.EAST
     }
 
     public getNewCoordinate() {

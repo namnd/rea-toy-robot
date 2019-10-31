@@ -3,19 +3,12 @@ import 'mocha'
 import { expect } from 'chai'
 
 describe('Coordinate', () => {
-    it('constructor', () => {
-        // Invalid coordinate
-        try {
-            const invalid = new Coordinate(-1, 0)
-        } catch(e) {
-            expect(e).instanceOf(Error)
-        }
-        // Valid one
+    it('constructor should create object successfully', () => {
         const coordinate = new Coordinate(1, 1)
         expect(coordinate).instanceOf(Coordinate)
     })
 
-    it('toString', () => {
+    it('toString should return correct coordinate string', () => {
         const coordinate = new Coordinate(1, 1)
         expect(`${coordinate}`).equal('1,1')
     })

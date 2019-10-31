@@ -16,8 +16,7 @@ export class PlaceCommand implements Command {
     execute(simulator: Simulator) {
         // @TODO: check valid place
         if (!simulator.map.validateCoordinate(this.coordinate)) {
-            console.log('Out of bounds')
-            return
+            throw new Error('Out of bounds')
         }
         this.robot.coordinate = this.coordinate
         this.robot.direction = this.direction

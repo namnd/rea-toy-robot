@@ -13,7 +13,9 @@ export class Simulator
     }
 
     public execute(command: Command) {
-        command.execute(this)
+        try {
+            command.execute(this)
+        } catch(e) {}
     }
 
 }

@@ -7,6 +7,9 @@ export class Map
 
     constructor(width: number, height: number)
     {
+        if (width <= 0 || height <= 0) {
+            throw new Error('Invalid input')
+        }
         this.width = width
         this.height = height
     }

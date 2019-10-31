@@ -8,7 +8,10 @@ export class TurnCommand implements Command {
         this.rotation = rotation
     }
     execute(simulator: Simulator) {
-        simulator.robot!.turn(this.rotation)
+        if (simulator.robot == null) {
+            throw new Error('Robot is not placed on the map yet')
+        }
+        simulator.robot.turn(this.rotation)
     }
 
 }
