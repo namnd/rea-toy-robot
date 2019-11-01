@@ -37,6 +37,8 @@ class CliApp {
         fs.readdir(directoryPath, (err, files) => {
             if (err) {
                 throw new Error('Folder not found: ' + err)
+            } else if (files.length === 0) {
+                throw new Error('Folder is empty')
             } else {
                 const question = [{
                     type: 'list',
