@@ -8,7 +8,7 @@
 docker build . --tag=toy-robot:latest
 ~~~
 
-## Run application in CLI
+## Run application
 ~~~
 docker run -it --rm toy-robot
 ~~~
