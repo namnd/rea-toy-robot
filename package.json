@@ -35,7 +35,8 @@
       "*.ts"
     ],
     "exclude": [
-      "**/*.spec.ts"
+      "**/*.spec.ts",
+      "src/app.ts"
     ],
     "extension": [
       ".ts",

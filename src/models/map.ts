@@ -18,7 +18,7 @@ export class Map
      * Validate a coordinate
      * @param coordinate 
      */
-    public validateCoordinate(coordinate: Coordinate)
+    public validateCoordinate(coordinate: Coordinate): boolean
     {
         return coordinate.x >= 0 && coordinate.x <= this.width
             && coordinate.y >= 0 && coordinate.y <= this.height
